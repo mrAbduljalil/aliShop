@@ -6,7 +6,7 @@ const Favorites = () => {
   const { favorites } = useFavorites();
   return (
     <div>
-    <h1>Favorites</h1>
+    <h1>Favorite</h1>
     {favorites.map((product) => (
       <ProductCard key={product.id} product={product} />
     ))}
