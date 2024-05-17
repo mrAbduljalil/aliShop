@@ -1,0 +1,146 @@
+.container{
+    width:100% ;
+    margin: 0 auto;
+}
+.headers{
+   margin-top: 30px;
+
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+.katalogBtn{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #FFBE1F;
+  background-color:#FFBE1F;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  
+}
+.katalogBtn:hover{
+    background-color:#fad26d;
+}
+.search{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+input{
+    border-top-left-radius:5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid #FFBE1F;
+    padding: 10px;
+    width: 350px;
+}
+.searchBtn{
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #FFBE1F;
+    padding: 15px;
+    margin-left:-6px;
+    background-color: #FFBE1F;
+    transition: 0.5s ease;
+}
+.searchBtn:hover{
+    background-color:#fad26d;
+}
+.product_store{
+display: flex;
+align-items: center;
+gap: 25px;
+}
+.stored{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+.LogIn{
+    border: 2px solid #FFBE1F;
+  padding: 10px 20px;
+  border-radius: 5px 10px;
+  text-align: center;
+  transition: 0.5s ease;
+}
+.LogIn:hover{
+    background-color:#fad26d;
+}
+.league{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.rus{
+    color:gray;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.menu-link{
+    color: gray;
+    font-weight: 400;
+    transition: 0.1s ease;
+}
+.menu-link:hover{
+    color: rgb(0, 0, 0);
+    font-weight:600;
+
+}
+.logotip{
+    width: 113px;
+    height: 32px;
+}
+
+/* Modal */
+/* .modal {
+    display: none; /* Uchib qolinadi */
+    /* position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  } */
+  
+  /* Modal content */
+  /* .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  } */
+  
+  /* Close button */
+  /* .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  } */
+  
+  /* .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .p{
+    font-weight: 900;
+    color: red;
+  } */ 
