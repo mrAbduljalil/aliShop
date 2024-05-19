@@ -1,41 +1,37 @@
 'use client'
-import { useCart } from '@/app/cartContext';
-import { useFavorites } from '../../app/favoritesContext';
+// import { useCart } from '@/app/cart/cartContext/cartContext';
+// import { useFavorites } from '@/app/favorites/favoritesContext/favoritesContext';
 import { ProductType } from "@/types/product.types";
 import Image from "next/image";
 import { useState } from "react";
 import Link from 'next/link';
 import { FaBasketShopping } from "react-icons/fa6";
-import { MdFavorite } from "react-icons/md";
-import { MdFavoriteBorder } from "react-icons/md";
-// import { useRouter } from 'next/router';
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
+
 
 interface ProductCardProps {
   product: ProductType;
 }
 
-const ProductCard = ({ product}:ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
   const [liked, setLiked] = useState<boolean>(false);
-  // const router = useRouter();
-  const { addToFavorites } = useFavorites();
-  const { addToCart } = useCart();
+  // const { addToFavorites } = useFavorites();
+  // const { addToCart } = useCart();
 
   const handleLike = () => {
     setLiked(!liked);
-    addToFavorites(product);
+    // addToFavorites(product);
   };
 
   const handleAddToCart = () => {
-    addToCart(product);
+    // addToCart(product);
   };
 
-  // const handleProductDetails = () => {
-  //   router.push(`/products/${product.id}`);
-  // };
   return (
-    // <Link href={`/product/${product.id}`}>
-      <div className="w-[280px] shadow-md p-5 rounded-md">
-       <button onClick={handleLike}>{liked ? <MdFavorite /> : <MdFavoriteBorder />}</button>
+    <div className="w-[280px] shadow-md p-5 rounded-md">
+      <button onClick={handleLike}>
+        {liked ? <MdFavorite /> : <MdFavoriteBorder />}
+      </button>
       <Image
         src={product.images[0]}
         alt={product.title}
@@ -43,13 +39,13 @@ const ProductCard = ({ product}:ProductCardProps) => {
         height={194}
         className="h-[194px] object-cover"
       />
-     
+
       <div className="relative">
         <div className="text-sm font-semibold inline-block px-3 py-0.5 bg-red-500 text-white rounded-2xl absolute left-2 -top-8">
           {Math.round(product.discountPercentage)}%
         </div>
         <div>{product.title}</div>
-        
+
         <div className="line-through">{product.price}$</div>
         <div className="">
           {(
@@ -59,13 +55,15 @@ const ProductCard = ({ product}:ProductCardProps) => {
           $
         </div>
         <br />
-        <button className="cartBtn" onClick={handleAddToCart}><FaBasketShopping /></button>
+        <button className="cartBtn" onClick={handleAddToCart}>
+          <FaBasketShopping />
+        </button>
         <br />
-        <Link href={`/product/${product.id}`}><button className="detailsBtn" >Details</button></Link>
-        
+        <Link href={`/product/${product.id}`}>
+          <button className="detailsBtn">Details</button>
+        </Link>
       </div>
-      </div>
-    // </Link>
+    </div>
   );
 };
 

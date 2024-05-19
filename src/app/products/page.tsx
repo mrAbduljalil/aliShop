@@ -24,7 +24,7 @@ const Products = () => {
         !loading && <div>No products yet</div>
       )}
       {error && <div>{error}</div>}
-      
+       <h1>hell</h1>
     </div>
   );
 };

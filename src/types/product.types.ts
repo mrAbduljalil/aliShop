@@ -18,3 +18,5 @@ export type ProductStoreType = {
   error: null | unknown;
   fetchProducts: () => void;
 };
+
+

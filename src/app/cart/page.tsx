@@ -1,23 +1,17 @@
 'use client'
-
+import { useCart } from '@/app/cart/cartContext/cartContext';
 import ProductCard from "@/components/product-card";
-import { useCart } from "../cartContext";
 
 const Cart = () => {
-  const { cartItems } = useCart();
-
+  const { cart } = useCart();
   return (
     <div>
-    <h1>Basket</h1>
-    <ul>
-      {cartItems.map((item) => (
-        <ProductCard key={item.id} product={item} />
+      <h1>Cart</h1>
+      {cart.map((product) => (
+        <ProductCard key={product.id} product={product} />
       ))}
-    </ul>
-  </div>
-  );
-};
+    </div>
+  )
+}
 
 export default Cart;
-
-
